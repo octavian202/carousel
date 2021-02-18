@@ -73,6 +73,25 @@
     color: white;
 }
 
+.text-over {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.main-color-joker {
+    color: red;
+}
+
+.main-color-jumanji {
+    color: orange;
+}
+
+.main-color-parasite {
+    color: green;
+}
 
 
 
