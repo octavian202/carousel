@@ -1,7 +1,19 @@
 const slides = document.getElementsByClassName('carousel-item');
 let slidePosition = 0;
 const totalSlides = slides.length;
-const slideIndicator = document.querySelector('.slide-indicator')
+const slideDots = document.querySelectorAll('.slide-dot')
+
+
+/* Slide dots */
+
+function unhighlightDot() {
+    slideDots[slidePosition].classList.remove('highlighted-dot')
+}
+
+function highlightDot() {
+    slideDots[slidePosition].classList.add('highlighted-dot')
+}
+
 
 
 /* Previous & Next Button section */
@@ -43,6 +55,7 @@ function slideRightNext() {
 
 function moveToNextSlide() {
     slideLeftPrev();
+    unhighlightDot();
     
     if (slidePosition === totalSlides - 1) {
         slidePosition = 0;
@@ -51,10 +64,12 @@ function moveToNextSlide() {
     }
     
     slideLeftNext()
+    highlightDot()
 }
 
 function moveToPrevSlide() {
     slideRightNext();
+    unhighlightDot()
     
     if (slidePosition === 0) {
         slidePosition = totalSlides - 1;
@@ -63,6 +78,7 @@ function moveToPrevSlide() {
     }
     
     slideRightPrev();
+    highlightDot()
 }
 
 

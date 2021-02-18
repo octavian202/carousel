@@ -56,16 +56,17 @@
     width: 20%;
     top: 84%;
     left: 200px;
+    overflow: hidden;
 }
 
 .slide-dot {
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
+    height: 3px;
+    width: 3px;
     color: gray;
     text-decoration: none;
     font-size: 50px;
     display: inline;
+    cursor: default;
 }
 
 .slide-indicator .highlighted-dot {
